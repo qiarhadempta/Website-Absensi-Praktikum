@@ -1,0 +1,2 @@
+-- Data contoh untuk demo (akun tiap role, satu matkul, satu sesi) ditulis di sini.
+-- Jangan memakai password asli. Simpan hanya hash password akun demo.

@@ -1,0 +1,18 @@
+# rahasia dan konfigurasi lokal
+.env
+config/config.local.php
+
+# upload pengguna
+/uploads/*
+!/uploads/.gitkeep
+
+# dependency dan log
+vendor/
+node_modules/
+*.log
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

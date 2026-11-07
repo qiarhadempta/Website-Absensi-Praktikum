@@ -1,0 +1,4 @@
+-- Struktur tabel ditulis di sini mulai tahap 1.
+-- Gunakan utf8mb4 dan engine InnoDB (agar foreign key berfungsi).
+-- Tabel yang direncanakan: users, courses, course_aslab, enrollments, sessions,
+-- attendance, leave_requests, point_logs, grade_components, grades, audit_logs
