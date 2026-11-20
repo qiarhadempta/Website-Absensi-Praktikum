@@ -26,7 +26,7 @@ foreach ($routes as [$method, $routePath, $handler]) {
 }
 
 http_response_code(404);
-$view404 = __DIR__ . '/../app/views/404.php';
+$view404 = __DIR__ . '/../app/views/errors/404.php';
 if (file_exists($view404)){
     require $view404;
 } else {
