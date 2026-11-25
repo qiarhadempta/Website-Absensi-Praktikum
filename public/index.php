@@ -1,33 +1,38 @@
 <?php
 
-require_once __DIR__ . '/../app/helpers/autoload.php';
+session_start();
 
-$routes = require __DIR__ . '/../app/routes.php';
+define('BASE_PATH', dirname(__DIR__));
+
+require_once BASE_PATH . '/app/helpers/functions.php';
+require_once BASE_PATH . '/app/helpers/autoload.php';
+
+$routes = require BASE_PATH . '/app/routes.php';
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 $scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
-if ($scriptDir !== '/' && str_starts_with($requestUri, $scriptDir)){
+if ($scriptDir !== '/' && str_starts_with($requestUri, $scriptDir)) {
     $requestUri = substr($requestUri, strlen($scriptDir));
 }
 
 $path = '/' . trim($requestUri, '/');
 
 foreach ($routes as [$method, $routePath, $handler]) {
-    if ($method === $requestMethod && $routePath === $path){
+    if ($method === $requestMethod && $routePath === $path) {
         [$controllerName, $actionName] = explode('@', $handler, 2);
 
         $controller = new $controllerName();
-        $controller -> $actionName();
+        $controller->$actionName();
 
         exit;
     }
 }
 
 http_response_code(404);
-$view404 = __DIR__ . '/../app/views/errors/404.php';
-if (file_exists($view404)){
+$view404 = BASE_PATH . '/app/views/errors/404.php';
+if (file_exists($view404)) {
     require $view404;
 } else {
     echo '404 Not Found';
