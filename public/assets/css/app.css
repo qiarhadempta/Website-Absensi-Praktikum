@@ -24,3 +24,19 @@ body,
     background-color: #161b22 !important;
     border-color: #30363d !important;
 }
+
+.card,
+.card.bg-dark {
+    background-color: #0d2951 !important;
+    --bs-card-bg: #0d2951;
+    border-color: #627eae !important;
+    border-radius: 12px !important;
+    --bs-card-border-radius: 12px;
+    --bs-card-inner-border-radius: 11px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #0d2951 !important;
+    border-bottom-color: #627eae !important;
+}
