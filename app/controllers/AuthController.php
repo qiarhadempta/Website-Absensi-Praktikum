@@ -16,10 +16,7 @@ class AuthController
 
     public function login(): void
     {
-        if (!verify_csrf($_POST['csrf_token'] ?? '')) {
-            $_SESSION['flash_error'] = 'Sesi formulir tidak valid. Silakan coba lagi.';
-            redirect('/login');
-        }
+        verify_csrf();
 
         $username = trim($_POST['username'] ?? '');
         $password = $_POST['password'] ?? '';
@@ -55,9 +52,7 @@ class AuthController
 
     public function logout(): void
     {
-        if (!verify_csrf($_POST['csrf_token'] ?? '')) {
-            redirect('/dashboard');
-        }
+        verify_csrf();
 
         $_SESSION = [];
         if (ini_get('session.use_cookies')) {
