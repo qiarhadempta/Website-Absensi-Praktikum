@@ -4,17 +4,18 @@ require BASE_PATH . '/app/views/layout/header.php';
 ?>
 
 <section id="login-section">
-    <!-- Tabel pembungkus agar kotak login berada di tengah layar -->
     <table class="table table-borderless mx-auto" style="max-width: 450px;">
         <tr>
             <td>
-                <h2>Masuk Sistem Praktikum</h2>
-                <p>Masukkan username dan password Anda</p>
+                <h2 class="text-center">Masuk Sistem Praktikum</h2>
+                <p class="text-center">Masukkan username dan password Anda</p>
             </td>
         </tr>
         <tr>
             <td>
-                <!-- [ISI 2: Kotak Alert Error jika $error tidak kosong (gunakan e($error))] -->
+                <?php if (!empty($error)): ?>
+                    <div class="alert alert-danger mb-0"><?= e($error) ?></div>
+                <?php endif; ?>
             </td>
         </tr>
         <tr>
@@ -22,23 +23,22 @@ require BASE_PATH . '/app/views/layout/header.php';
                 <form method="post" action="/login">
                     <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
 
-                    <!-- Tabel tata letak form input -->
-                    <table class="table table-bordered">
+                    <table class="table table-borderless align-middle">
                         <tr>
-                            <th>Username (NIM / NIP)</th>
+                            <th>Username (NIM)</th>
                             <td>
-                                <!-- [ISI 3: <input type="text" name="username" class="form-control" required autofocus>] -->
+                                <input type="text" name="username" class="form-control" required autofocus>
                             </td>
                         </tr>
                         <tr>
                             <th>Password</th>
                             <td>
-                                <!-- [ISI 4: <input type="password" name="password" class="form-control" required>] -->
+                                <input type="password" name="password" class="form-control" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" class="text-end">
-                                <!-- [ISI 5: <button type="submit" class="btn btn-primary">Masuk</button>] -->
+                                <button type="submit" class="btn btn-primary">Masuk</button>
                             </td>
                         </tr>
                     </table>
