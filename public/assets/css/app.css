@@ -1,0 +1,26 @@
+#session-code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    background-color: #161b22;
+    border: 2px dashed #0dcaf0;
+    border-radius: 0.5rem;
+    color: #0dcaf0;
+    user-select: all;
+}
+
+body,
+.table {
+    background-color: #090c10 !important;
+    --bs-body-bg: #090c10;
+    --bs-table-bg: #090c10;
+}
+
+.form-control {
+    background-color: #161b22 !important;
+    border-color: #30363d !important;
+}
