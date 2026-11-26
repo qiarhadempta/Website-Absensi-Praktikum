@@ -1,42 +1,72 @@
-#session-code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: 0.4rem;
-    text-align: center;
-    padding: 1.5rem 2rem;
-    margin: 1rem 0;
-    background-color: #161b22;
-    border: 2px dashed #0dcaf0;
-    border-radius: 0.5rem;
-    color: #0dcaf0;
-    user-select: all;
+/*
+ * Tema aplikasi: palet GroverSec di atas Bootstrap 5.3 mode gelap.
+ *
+ * Aturan pakai:
+ * - Dimuat SETELAH bootstrap.min.css (urutan <link> di layout/header.php).
+ * - Tag <html> harus memakai data-bs-theme="dark":  <html lang="id" data-bs-theme="dark">
+ * - Prinsipnya: ubah VARIABEL Bootstrap, jangan menimpa selector umum
+ *   (body, p, form, label, .card, .row, .container). Selector umum itulah yang bentrok.
+ */
+
+/* 1. Palet warna dan font */
+[data-bs-theme="dark"] {
+    --bs-body-bg: #0F172A;
+    --bs-body-color: #E2E8F0;
+    --bs-emphasis-color: #FFFFFF;
+    --bs-secondary-color: #A0AEC0;
+    --bs-secondary-bg: #1E293B;
+    --bs-tertiary-bg: #1E293B;
+    --bs-border-color: #334155;
+    --bs-link-color-rgb: 96, 165, 250;
+    --bs-link-hover-color-rgb: 147, 197, 253;
+    --bs-info-rgb: 96, 165, 250;
+    --bs-body-font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
-body,
-.table {
-    background-color: #090c10 !important;
-    --bs-body-bg: #090c10;
-    --bs-table-bg: #090c10;
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
 }
 
-.form-control {
-    background-color: #161b22 !important;
-    border-color: #30363d !important;
+/* 2. Tombol utama (variabel tombol Bootstrap ditulis per kelas, bukan global) */
+.btn-primary {
+    --bs-btn-bg: #2563EB;
+    --bs-btn-border-color: #2563EB;
+    --bs-btn-hover-bg: #1D4ED8;
+    --bs-btn-hover-border-color: #1D4ED8;
+    --bs-btn-active-bg: #1E40AF;
+    --bs-btn-active-border-color: #1E40AF;
+    --bs-btn-disabled-bg: #2563EB;
+    --bs-btn-disabled-border-color: #2563EB;
 }
 
-.card,
-.card.bg-dark {
-    background-color: #0d2951 !important;
-    --bs-card-bg: #0d2951;
-    border-color: #627eae !important;
-    border-radius: 12px !important;
+/* 3. Navbar */
+.navbar {
+    --bs-navbar-color: #A0AEC0;
+    --bs-navbar-hover-color: #FFFFFF;
+    --bs-navbar-active-color: #FFFFFF;
+    --bs-navbar-brand-color: #FFFFFF;
+    --bs-navbar-brand-hover-color: #FFFFFF;
+    border-bottom: 1px solid #0A3A5C;
+}
+
+/* 4. Kartu dan tabel di dalam kartu */
+.card {
+    --bs-card-bg: #1E293B;
+    --bs-card-border-color: #334155;
+    --bs-card-cap-bg: rgba(255, 255, 255, 0.03);
     --bs-card-border-radius: 12px;
     --bs-card-inner-border-radius: 11px;
-    overflow: hidden;
 }
 
-.card-header {
-    background-color: #0d2951 !important;
-    border-bottom-color: #627eae !important;
+.card .table {
+    --bs-table-bg: transparent;
+    --bs-table-border-color: #334155;
+}
+
+/* 5. Footer */
+footer {
+    background-color: #1E293B;
+    color: #A0AEC0;
+    text-align: center;
+    padding: 8px;
 }
