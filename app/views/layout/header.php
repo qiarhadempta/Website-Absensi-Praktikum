@@ -7,7 +7,7 @@ $role = $user['role'] ?? null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= e($pageTitle ?? 'Presensi Praktikum') ?></title>
+    <title><?= e($pageTitle ?? 'Praktikum Jarkom') ?></title>
 
     <!-- Bootstrap lokal & CSS khusus aplikasi -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@ $role = $user['role'] ?? null;
         <td class="p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary px-3">
                 <div class="container">
-                    <a class="navbar-brand fw-bold text-info" href="/dashboard">Presensi Praktikum</a>
+                    <a class="navbar-brand fw-bold text-info" href="/dashboard">Praktikum Jarkom</a>
                     
                     <?php if ($user): ?>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
