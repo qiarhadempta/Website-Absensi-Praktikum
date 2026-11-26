@@ -56,7 +56,7 @@ $role = $user['role'] ?? null;
                                 <?= e($user['name']) ?> 
                                 <span class="badge bg-info text-dark text-uppercase"><?= e($role) ?></span>
                             </span>
-                            <a href="/change-password" class="btn btn-outline-light btn-sm">Ganti Password</a>
+                            <a href="/password/change" class="btn btn-outline-light btn-sm">Ganti Password</a>
                             <form method="post" action="/logout" class="m-0">
                                 <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
                                 <button type="submit" class="btn btn-danger btn-sm">Keluar</button>

@@ -21,4 +21,16 @@ class User
 
         return $user ?: null;
     }
+
+    public static function updatePassword(int $id, string $newPasswordHash): void
+    {
+        $pdo = Database::getConnection();
+        $stmt = $pdo->prepare(
+            'UPDATE users SET password_hash = :hash, must_change_password = 0 WHERE id = :id'
+        );
+        $stmt->execute([
+            'hash' => $newPasswordHash,
+            'id'   => $id,
+        ]);
+    }
 }
