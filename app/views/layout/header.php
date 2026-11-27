@@ -16,13 +16,13 @@ $role = $user['role'] ?? null;
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/app.css">
 </head>
-<body class="bg-dark text-light">
+<body class="text-light">
 
 <table class="table table-borderless min-vh-100 mb-0">
     <!-- BARIS 1: NAVBAR / HEADER -->
     <tr style="height: 1%;">
         <td class="p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary px-3">
+            <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary px-3">
                 <div class="container">
                     <a class="navbar-brand fw-bold text-info" href="/dashboard">Praktikum Jarkom</a>
                     
