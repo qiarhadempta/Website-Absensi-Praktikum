@@ -37,7 +37,7 @@ $role = $user['role'] ?? null;
                             </li>
                             <?php if ($role === 'admin'): ?>
                                 <li class="nav-item"><a class="nav-link" href="/admin/users">Pengguna</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/admin/courses">Mata Kuliah</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/admin/course">Praktikum</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/admin/audit-logs">Log Audit</a></li>
                             <?php elseif ($role === 'aslab'): ?>
                                 <li class="nav-item"><a class="nav-link" href="/aslab/sessions">Sesi Presensi</a></li>
