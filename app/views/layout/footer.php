@@ -4,7 +4,7 @@
 
     <!-- BARIS 3: FOOTER -->
     <tr style="height: 1%;">
-        <td class="bg-black text-center text-secondary py-3 border-top border-secondary">
+        <td class="text-center text-secondary py-3 border-top border-secondary">
             <small>&copy; <?= date('Y') ?> Sistem Informasi Presensi &amp; Penilaian Praktikum</small>
         </td>
     </tr>

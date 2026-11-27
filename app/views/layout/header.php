@@ -16,13 +16,13 @@ $role = $user['role'] ?? null;
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/app.css">
 </head>
-<body class="bg-dark text-light">
+<body class="text-light">
 
 <table class="table table-borderless min-vh-100 mb-0">
     <!-- BARIS 1: NAVBAR / HEADER -->
     <tr style="height: 1%;">
         <td class="p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary px-3">
+            <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary px-3">
                 <div class="container">
                     <a class="navbar-brand fw-bold text-info" href="/dashboard">Praktikum Jarkom</a>
                     
@@ -37,7 +37,7 @@ $role = $user['role'] ?? null;
                             </li>
                             <?php if ($role === 'admin'): ?>
                                 <li class="nav-item"><a class="nav-link" href="/admin/users">Pengguna</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/admin/courses">Mata Kuliah</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/admin/course">Praktikum</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/admin/audit-logs">Log Audit</a></li>
                             <?php elseif ($role === 'aslab'): ?>
                                 <li class="nav-item"><a class="nav-link" href="/aslab/sessions">Sesi Presensi</a></li>
